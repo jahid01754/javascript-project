@@ -6,23 +6,100 @@
     </head>
     <body>
         <script>
-          if(false){
-            console.log('hello');
+          // if(false){
+          //   console.log('hello');
+          // }else{
+          //   console.log('else');
+          // }
+
+          // const age = 15;
+
+          // if(age >= 16){
+          //   console.log('You can drive');
+          // }else if(age >= 14){
+          //   console.log('Almost there');
+            
+          // }else{
+          //   console.log ('You can not drive');
+            
+          // }
+
+          // if(5){
+          //   console.log('truthy '); 
+          // }
+
+          // const cartQuantity = 0;
+          // if(cartQuantity){
+          //   console.log('cart has products');
+          // }else{
+          //   console.log('cart has no products');
+          // }
+
+          // console.log(!0);
+          // console.log('text' / 10);
+          
+          // let variable1;
+          // console.log(variable1);
+          
+          // const result = 5 ? 'truthy' : 'falsy';
+          // console.log(result);
+          
+          // true && console.log('hello');
+          // const message = 5 && 'hello';
+          // console.log(message);
+
+          // const currency = undefined || 'USD';
+          // console.log(currency);
+          
+          const hour = 23;
+          const name = 'Choion';
+
+          if(hour >= 6 && hour <12){
+            console.log(`Good Morning ${name}`);
+          }else if(hour >= 13 && hour < 17){
+            console.log(`Good AfterNoon ${name}`);
           }else{
-            console.log('else');
+            console.log(`Good Night ${name}`);
           }
 
-          const age = 15;
 
-          if(age >= 16){
-            console.log('You can drive');
-          }else if(age >= 14){
-            console.log('Almost there');
-            
+
+
+          const age = 75;
+          const isHolyday = true;
+
+          if(!isHolyday && (age <= 6 || age >= 65)){
+            console.log('Discount');
           }else{
-            console.log ('You can not drive');
-            
+            console.log('No discount');
           }
+
+
+
+
+          let ex = Math.random();
+          //let result = '';
+          // if(ex < 0.5){
+          //   //console.log('heads');
+          //   result = 'heads';
+          // }else{
+          //   //console.log('tails');
+          //   result = 'tails';
+          // }
+          let result = (ex < 0.5) ? 'heads' : 'tails';
+
+          let guess = 'heads';
+          // if(result === guess){
+          // console.log('You win!');
+          // }else{
+          //   console.log('You Lose!');
+          // }
+
+          let a = (result === guess) ? 'You win!' : 'You Lose!';
+          console.log(a);
+          
+          
+          
         </script>
     </body>
 </html>
