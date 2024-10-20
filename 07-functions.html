@@ -60,7 +60,84 @@
 
           console.log(convertTemperature(25,'C'));
           console.log(convertTemperature(86,'F'));
+
+          
+          
+          
+          
+          function convertLength(length,from,to){
+            // if(from === 'miles' && to === 'km'){
+            //   let result = convertToKm(length);
+            //   return `${result} km`;
+            // }else if(from === 'km' && to === 'miles'){
+            //   let result = convertToMile(length);
+            //   return `${result} miles`;
+            // }else if(from === 'miles' && to === 'miles'){
+            //   let result = convertMileToMile(length);
+            //   return `${result} miles`;
+            // }else if(from === 'km' && to === 'km'){
+            //   let result = convertKmToKm(length);
+            //   return `${result} km`;
+            // }
+
+            if(from === 'miles' && to === 'km'){
+              return `${length * 1.6} km`;
+            }else if(from === 'km' && to === 'miles'){
+              return `${(1 / 1.6) * length} miles`;
+            }else if(from === 'miles' && to === 'miles'){
+              return `${length} miles`;
+            }else if(from === 'km' && to === 'km'){
+              return `${length} km`;
+            }else if(from === 'miles' && to === 'ft'){
+              return `${length * 5280} ft`;
+            }else if(from === 'km' && to ==='ft'){
+              return `${length * 3281} ft`;
+            }
+
+            else if(from !== 'miles' && from !== 'km' && from !== 'ft'){
+              return `Invalid Unit(1): ${from}`;
+            }else if(to !== 'miles' && to !== 'km' && to !== 'ft'){
+              return `Invalid Units(2): ${to}`;
+            }
+          }
+
+          // function convertToMile(km){
+          //   return km * 0.62137119 ;
+          // }
+          //console.log(convertToMile(5));
+
+          // function convertToKm(mile){
+          //   return mile * 1.609344;
+          // }
+          // //console.log(convertToKm(5));
+
+          // function convertMileToMile(mile){
+          //   return mile;
+          // }
+          // function convertKmToKm(km){
+          //   return km ;
+          // }
+
+          console.log(convertLength(50,'miles','km'));
+          console.log(convertLength(32,'km','miles'));
+          console.log(convertLength(50,'km','km'));
+          console.log(convertLength(32,'miles','miles'));
+          console.log(convertLength(5,'miles','km'));
+          console.log(convertLength(5,'miles','ft'));
+          console.log(convertLength(5,'km','ft'));
+
+          console.log(convertLength(5,'km','lbs'));
+          
+          
+           
+          
+          
+          
+
         </script>
+
+
+
     </body>
 </html>
 
