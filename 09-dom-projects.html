@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom Projects</title>
+        
+    </head>
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button onclick="
+            subscribe();
+        " class="js-subscribe-button">
+            Subscribe
+        </button>
+
+        <!-- <button onclick="
+            const btnElem = document.querySelector('.js-login-button');
+            if(btnElem.innerHTML === 'Log In'){
+                btnElem.innerHTML = 'Loged In';
+            }else{
+                btnElem.innerHTML = 'Log In';
+            }
+        " class="js-login-button">Log in</button> -->
+    
+        <script>
+            function subscribe(){
+                const buttonElement = document.querySelector('.js-subscribe-button');
+
+                if(buttonElement.innerText === 'Subscribe'){
+                    buttonElement.innerText = 'Subscribed';
+                }else{
+                    buttonElement.innerText = 'Subscribe';
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
