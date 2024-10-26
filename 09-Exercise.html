@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise</title>
+</head>
+<body>
+<!-- 9 (a+b) -->
+    <button class="button">9a</button>
+    <button class="js-button">9b</button>
+    <br><br>
+
+<!-- 9c -->
+    <button onclick="
+        tossHead();
+        //document.querySelector('.js-toss-result').innerHTML = 'You chose: heads';
+    " class="js-head-button">heads</button>
+    <button onclick="
+        tossTail();
+        //document.querySelector('.js-toss-result').innerHTML = 'You chose: tails';
+    " class="js-tail-button">tails</button>
+    <p class="js-toss-result"></p>
+    <br><br>
+
+<!-- 9d -->
+    <input placeholder="Enter your name" class="js-name" onkeydown="
+        handleMessageKeydown(event);
+    ">
+    <button onclick="
+        message();
+    " class = 'js-submit-button'>Submit</button>
+    <p class="js-result"></p>
+
+<!-- 9h -->
+    <input placeholder="Type something" class="js-input" onkeyup="
+        handleMessageKeyUp();
+    ">
+    <p class="js-input-result"></p>
+
+
+    <script>
+// 9 (a+b)
+        console.log(document.querySelector('button'));
+        document.querySelector('.js-button')
+            .innerHTML = '9b done!';
+// 9c
+        const headButton = document.querySelector('.js-head-button');
+        const tailButton = document.querySelector('.js-tail-button');
+        const tossResult = document.querySelector('.js-toss-result');
+
+        function tossHead(){
+            if(headButton.innerText === 'heads'){
+                tossResult.innerText = `You chose: ${headButton.innerText}`;
+            }
+        }
+        function tossTail(){
+            if(tailButton.innerText === 'tails'){
+                tossResult.innerText = `You chose: ${tailButton.innerText}`;
+            }
+        }
+
+// 9 (d+e+f)
+        function message(){
+            const submit = document.querySelector('.js-submit-button');
+            const nameInput = document.querySelector('.js-name');
+            document.querySelector('.js-result').innerText = `Your name is: ${nameInput.value}`;
+        }
+
+        function handleMessageKeydown(event){
+            if(event.key === 'Enter'){
+                message();
+            }
+        }
+
+// 9h
+        function handleMessageKeyUp(){
+            const inputName = document.querySelector('.js-input');
+            document.querySelector('.js-input-result')
+                .innerText = inputName.value;
+            
+        }
+    </script>
+</body>
+</html>
