@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Exercise</title>
+    <style>
+        .add-to-cart-button{
+            border: none;
+            background-color: rgb(255, 216, 20);
+            padding: 10px 30px;
+            border-radius: 20px;
+            /* font-weight: bold; */
+            font-family: Arial;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .request-now-button{
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .schedule-button{
+            border: none;
+            background-color: rgb(230, 230,230);
+            color: rgb(65, 62, 62);
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .toggle-button{
+            border: none;
+            background-color: rgb(230, 230,230);
+            color: rgb(65, 62, 62);
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .is-toggled{
+            border: none;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button class="add-to-cart-button">Add to Cart</button>
+    <button class="request-now-button">Request now</button>
+    <button class="schedule-button">Schedule for later</button>
+    <button class="js-test-button ">Test</button>
+    <p>
+        <button class="js-gaming-button toggle-button" onclick="
+            gamingButtonClick();
+        ">Gaming</button>
+        <button class="js-music-button toggle-button" onclick="
+            musicButtonClick();
+        ">Music</button>
+        <button class="js-tech-button toggle-button" onclick="
+            techButtonClick();
+        ">Tech</button>
+    </p>
+
+    <script>
+        const button = document.querySelector('.js-test-button');
+        console.log(button.classList.contains('js-test-button'));
+
+        function gamingButtonClick(){
+            const gbtn = document.querySelector('.js-gaming-button');
+            const mbtn = document.querySelector('.js-music-button');
+            const tbtn =  document.querySelector('.js-tech-button'); 
+            
+            if(!gbtn.classList.contains('is-toggled')){
+                gbtn.classList.add('is-toggled')
+            }else{
+                gbtn.classList.remove('is-toggled');
+            }
+        }
+        function musicButtonClick(){
+            const mbtn = document.querySelector('.js-music-button'); 
+            
+            if(!mbtn.classList.contains('is-toggled')){
+                mbtn.classList.add('is-toggled')
+            }else{
+                mbtn.classList.remove('is-toggled');
+            }
+        }
+        function techButtonClick(){
+            const tbtn =  document.querySelector('.js-tech-button'); 
+            
+            if(!tbtn.classList.contains('is-toggled')){
+                tbtn.classList.add('is-toggled')
+            }else{
+                tbtn.classList.remove('is-toggled');
+            }
+        }
+
+    </script>
+</body>
+</html>
